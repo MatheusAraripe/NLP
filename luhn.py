@@ -100,5 +100,3 @@ def sumariza_lemma(txt, n_palavras, distancia, quant_sentencas):
     melhores_sentencas = [sentencas_original[i] for (nota, i) in melhores_sentencas]
     return sentencas_original, melhores_sentencas, nota_sentencas
 
-
-print("Hello!")
