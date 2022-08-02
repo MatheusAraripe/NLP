@@ -1,5 +1,5 @@
 # Natural Language Processing
-Test of algorithms for natural language processing projects.
+Test of algorithms for natural language processing in portuguese projects.
 
 luhn.py --> Luhn's Algorithm Test
 #
