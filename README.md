@@ -5,4 +5,4 @@ luhn.py --> Luhn's Algorithm Test
 #
 summarization.py --> Word frequency summarization algorithm
 #
-cosine.py --> Cosine similarity summarization algorithm
+cosine_similarity.py --> Cosine similarity summarization algorithm
