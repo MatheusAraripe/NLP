@@ -10,8 +10,8 @@ Original file is located at
 #library to get a text from the internet
 !pip install goose3 -q
 
-"""Importação das bibliotecas para trabalhar com expressões e linguagem natural
-
+"""
+Importing libraries to work with expressions and natural language
 """
 
 import nltk
@@ -25,7 +25,7 @@ nltk.download('punkt')
 
 nltk.download("stopwords")
 
-"""# Teste de um texto retirado da internet """
+"""# getting texts from the internet """
 
 g = Goose()
 url = "your_url"
@@ -38,8 +38,7 @@ def format(txt):
   txt = re.sub (r'\s', ' ', txt)
   txt = txt.lower()
   tokens = []
-  vicios = ['né', 'Então', 'então', 'gente', 'Né']
-  stopwords = nltk.corpus.stopwords.words("portuguese") + vicios
+  stopwords = nltk.corpus.stopwords.words("portuguese")
   for i in nltk.word_tokenize(txt):
     if i not in stopwords and i not in string.punctuation:
           tokens.append(i)
@@ -81,9 +80,9 @@ def sumarizar(txt, quant_sentencas):
       texto += sentenca 
   return display(HTML(f"""{texto}"""))
 
-sumarizar(txt,4)
 
-"""# **Lematizaçao**"""
+
+"""# **lemmatization**"""
 
 import spacy
 !python -m spacy download pt_core_news_sm
@@ -98,8 +97,7 @@ def format_lemma(txt):
   txt = txt.lower()
   documento = pln(txt)
   tokens = []
-  vicios = ['né', 'Então', 'então', 'gente']
-  stopwords = nltk.corpus.stopwords.words("portuguese") + vicios
+  stopwords = nltk.corpus.stopwords.words("portuguese")
   for i in documento:
     if i.text not in stopwords and i.text not in string.punctuation:
       tokens.append(i.lemma_)
